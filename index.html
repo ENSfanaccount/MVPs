@@ -1,51 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVP's Hall of Fame</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-magenta': '#A4236B',
+                        'cs2-start': '#f59e0b',
+                        'cs2-end': '#d97706',
+                        'lol-start': '#B8B039',
+                        'lol-end': '#968F2C',
+                        'smash-start': '#DC2626',
+                        'smash-end': '#7F1D1D',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-title">
+<body class="font-sans leading-[1.6]">
+    <nav class="bg-custom-magenta text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="font-medium text-xl">
                 MVP's Hall of fame
             </div>
-            <div class="nav-links">
-                <a href="#" class="nav-link">League of legends</a>
-                <a href="#" class="nav-link">CS2</a>
-                <a href="#" class="nav-link">Smash ultimate</a>
+            <div class="flex flex-col md:flex-row mt-4 md:mt-0 md:space-x-8 space-y-2 md:space-y-0">
+                <a href="#intro" class="text-white no-underline transition-opacity hover:opacity-80">Intro</a>
+                <a href="#cs2" class="text-white no-underline transition-opacity hover:opacity-80">CS2</a>
+                <a href="#lol" class="text-white no-underline transition-opacity hover:opacity-80">League of legends</a>
+                <a href="#smash" class="text-white no-underline transition-opacity hover:opacity-80">Smash ultimate</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-image-container">
-                    <img src="media/imagenes/cs2-logo1.jpg" alt="cs2-banner" class="hero-image">
+        <section id="intro" class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl font-bold mb-4">Bienvenidos a MVP's Hall of Fame</h1>
+                <p class="max-w-2xl mx-auto">En esta pagina haremos una recopilacion anual de los MVPs de los eventos mas grandes de Esports, dando un poco de contexto sobre el jugador, como logro este título en el campeonato y sus highlights durante el torneo.</p>
+            </div>
+        </section>
+
+        <section id="cs2" class="bg-gradient-to-r from-cs2-start to-cs2-end text-white py-16">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="media/imagenes/cs2-logo1.jpg" alt="CS2 Players" class="w-full h-auto rounded-lg">
                 </div>
-                <div class="hero-text">
-                    <h2>Mayor Value Players</h2>
-                    <p>En esta pagina haremos una recopilacion anual de los MVPs de los eventos mas grandes de Esports, dando un poco de contexto sobre el jugador, como logro este título en el campeonato y sus highlights durante el torneo.</p>
+                <div class="md:w-1/2 md:pl-8">
+                    <h2 class="text-3xl font-bold mb-4">Counter Strike 2</h2>
+                    <p>Descubre al jugador mas valioso del torneo anual de counter strike.</p>
                 </div>
             </div>
         </section>
 
-        <section class="video-section container">
-            <h2>Featured Highlights</h2>
-            <div class="video-grid">
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 grid gap-8 md:grid-cols-3">
+                <div class="md:col-span-1 w-full">
+                    <img src="media/imagenes/b1t.jpg" alt="CS2 Champion" class="w-full h-auto rounded-lg shadow-lg">
                 </div>
-                <!-- Add more video containers as needed -->
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">CS2 WORLD CUP 2024 MVP</h2>
+                    <p>el jugador ukraneano aun siendo joven ofrecio un rendimiento dominante de B1T durante todo el torneo, particularmente en la gran final contra G2 Esports, le valió el galardón individual. Promedió una calificación de 1.48 en victorias en el mapa de NAVIians, con picos de 1.96 contra FURIA, 1.54 contra MOUZ y 1.45 y 1.74 contra G2 en la final.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w89_gZPv7sc?si=tfGe6Q6j-hFhja7j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+<section id="lol" class="bg-gradient-to-r from-lol-start to-lol-end text-white py-16">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+            <img src="media/imagenes/lolcito.jpg" alt="League of Legends" class="w-full h-auto rounded-lg">
+        </div>
+        <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">LOL WORLD 2024</h2>
+            <p>Vive los momentos más épicos del rey demonio.</p>
+        </div>
+    </div>
+</section>
+
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 grid gap-8 md:grid-cols-3">
+                <div class="md:col-span-1 w-full">
+                    <img src="media/imagenes/Faker_2020_interview.jpg" alt="Faker" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">Lee Sang-Hyeok, más conocido como Faker</h2>
+                    <p>Es un jugador profesional surcoreano de League of Legends. Conocido anteriormente como GoJeonPa en el servidor coreano y como Hide on Bush actualmente, ganó el título gracias al aporte en peleas decisivas y decisiones tomadas en fracciones de segundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vlRt36fKgaw?si=z_zLDMKAhqquPzTq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="smash" class="grid grid-cols-1 md:grid-cols-2 bg-gradient-to-r from-smash-start to-smash-end text-white py-16">
+            <div class="flex justify-center items-center">
+                <img src="media/imagenes/41ElSekevGL.jpg" alt="Smash Ultimate Champion" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+            <div class="container mx-auto px-4 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-4">Smash MVP</h2>
+                <p>Discover uno de los mejores jugadores a nivel global durante los years.</p>
+            </div>
+        </section>
+
+        <section class="bg-gray-100 py-16">
+            <div class="container mx-auto px-4 grid gap-8 md:grid-cols-3">
+                <div class="md:col-span-1 w-full">
+                    <img src="media/imagenes/MKLeo_at_Frostbite_2020_(cropped).jpg" alt="Smash Ultimate Champion" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold mb-4">Smash Ultimate Champion</h2>
+                    <p>MKLeo es el nombre profesional de Leonardo López Pérez, un jugador mexicano reconocido como uno de los mejores jugadores de Super Smash Bros. Ultimate a nivel mundial y una leyenda en la escena competitiva de Super Smash Bros. en general.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="aspect-w-16 aspect-h-9 max-w-3xl mx-auto">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iEKuRvKmbjE?si=0kvOL4vz5qy_7Y21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
     </main>
