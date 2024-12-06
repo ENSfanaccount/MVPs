@@ -4,47 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVP's Hall of Fame</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'custom-magenta': '#A4236B',
-                    },
-                },
-            },
-        }
-    </script>
-    <style>
-        body {
-            background-color: #E5E7EB;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="bg-custom-magenta text-white px-4 py-3">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="font-medium">
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-title">
                 MVP's Hall of fame
             </div>
-            <div class="flex gap-8">
-                <a href="#" class="hover:opacity-80 transition-opacity">
-                    League of legends
-                </a>
-                <a href="#" class="hover:opacity-80 transition-opacity">
-                    CS2
-                </a>
-                <a href="#" class="hover:opacity-80 transition-opacity">
-                    Smash ultimate
-                </a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">League of legends</a>
+                <a href="#" class="nav-link">CS2</a>
+                <a href="#" class="nav-link">Smash ultimate</a>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Welcome to MVP's Hall of Fame</h1>
-        <p>This is where you can add your main content.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="media/imagenes/cs2-logo1.jpg" alt="cs2-banner" class="hero-image">
+                </div>
+                <div class="hero-text">
+                    <h2>Mayor Value Players</h2>
+                    <p>En esta pagina haremos una recopilacion anual de los MVPs de los eventos mas grandes de Esports, dando un poco de contexto sobre el jugador, como logro este título en el campeonato y sus highlights durante el torneo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section container">
+            <h2>Featured Highlights</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <!-- Add more video containers as needed -->
+            </div>
+        </section>
     </main>
 </body>
 </html>
